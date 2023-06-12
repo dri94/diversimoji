@@ -148,10 +148,10 @@ xmlns:xlink="http://www.w3.org/1999/xlink">
         _nose +
         _eyes +
         _eyebrows +
-        _glasses +
         _necklaces +
         '''</g>''' +
         _hair +
+        _necklaces +
         '''</g></g></g></g></svg>''';
     return _completeSVG;
   }
@@ -247,7 +247,7 @@ xmlns:xlink="http://www.w3.org/1999/xlink">
             '''</svg>''';
       case 'necklacesType':
         if (attributeValueIndex == 0) return emptySVGIcon;
-        return '''<svg width="20px" height="20px" viewBox="-3 -50 120 170" >''' +
+        return '''<svg width="20px" height="20px" viewBox="75 150 120 120" >''' +
             necklaces[NecklacesType[attributeValueIndex!]] +
             '''</svg>''';
       case 'skinColor':

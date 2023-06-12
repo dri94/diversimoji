@@ -107,9 +107,9 @@ xmlns:xlink="http://www.w3.org/1999/xlink">
         _eyes +
         _eyebrows +
         _glasses +
-        _necklaces +
         '''</g>''' +
         _hair +
+        _necklaces +
         '''</g></g></g></g></svg>''';
     return _completeSVG;
   }
