@@ -121,6 +121,7 @@ const List<String> GlassesType = [
 ];
 
 const List<String> NecklacesType = [
+  'Nothing',
   'Gold Chain',
 ];
 
