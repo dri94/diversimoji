@@ -4,8 +4,8 @@ import 'package:flutter/foundation.dart';
 final Map<String, FluttermojiPropertyItem> fluttermojiProperties = {
   "style": FluttermojiPropertyItem(title: "Style", property: FluttermojiStyle),
   "topType": FluttermojiPropertyItem(title: "Hair", property: TopType),
-  "accessoriesType":
-      FluttermojiPropertyItem(title: "Accessory", property: AccessoriesType),
+  "glassesType":
+      FluttermojiPropertyItem(title: "Glasses", property: GlassesType),
   "hairColor":
       FluttermojiPropertyItem(title: "Hair\nColor", property: HairColor),
   "facialHairType":
@@ -51,7 +51,7 @@ const String emptySVGIcon = '''
 
 const Map<String, int> defaultFluttermojiOptions = {
   'topType': 24,
-  'accessoriesType': 0,
+  'glassesType': 0,
   'hairColor': 1,
   'facialHairType': 0,
   'facialHairColor': 1,
@@ -108,7 +108,7 @@ const List<String> TopType = [
   'Santa Hat w/ ears',
 ];
 
-const List<String> AccessoriesType = [
+const List<String> GlassesType = [
   'Nothing',
   'PrescriptionGlasses',
   'Another pair of prescriptions',
@@ -116,7 +116,6 @@ const List<String> AccessoriesType = [
   'Sunglasses',
   'Wayfarers',
   'Kurt',
-  'Chain'
 ];
 
 const List<String> HairColor = [

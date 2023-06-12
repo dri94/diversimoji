@@ -10,7 +10,7 @@ import 'fluttermoji_assets/face/nose/nose.dart';
 import 'fluttermoji_assets/fluttermojimodel.dart';
 import 'fluttermoji_assets/skin.dart';
 import 'fluttermoji_assets/style.dart';
-import 'fluttermoji_assets/top/accessories/accessories.dart';
+import 'fluttermoji_assets/top/accessories/glasses.dart';
 import 'fluttermoji_assets/top/facialHair/facialHair.dart';
 import 'fluttermoji_assets/top/hairStyles/hairStyle.dart';
 
@@ -19,7 +19,7 @@ class FluttermojiFunctions {
   FluttermojiFunctions() {
     _decodedList = {
       'topType': 4,
-      'accessoriesType': 0,
+      'glassesType': 0,
       'hairColor': 1,
       'facialHairType': 0,
       'facialHairColor': 1,
@@ -66,7 +66,7 @@ class FluttermojiFunctions {
     String _nose = nose['Default'];
     String _eyes = eyes['${_getFluttermojiProperty('eyeType')}'];
     String _eyebrows = eyebrow['${_getFluttermojiProperty('eyebrowType')}'];
-    String _accessory = accessories[_getFluttermojiProperty('accessoriesType')];
+    String _glasses = glasses[_getFluttermojiProperty('glassesType')];
     String _hair = HairStyle.generateHairStyle(
         hairType: _getFluttermojiProperty('topType'),
         hColor: _getFluttermojiProperty('hairColor'))!;
@@ -103,7 +103,7 @@ xmlns:xlink="http://www.w3.org/1999/xlink">
         _nose +
         _eyes +
         _eyebrows +
-        _accessory +
+        _glasses +
         '''</g>''' +
         _hair +
         '''</g></g></g></g></svg>''';
