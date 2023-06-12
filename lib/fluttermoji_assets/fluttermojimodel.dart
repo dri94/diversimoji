@@ -116,7 +116,7 @@ const List<String> AccessoriesType = [
   'Sunglasses',
   'Wayfarers',
   'Kurt',
-  'Hoops'
+  'Chain'
 ];
 
 const List<String> HairColor = [
