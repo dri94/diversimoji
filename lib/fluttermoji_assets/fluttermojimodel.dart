@@ -6,6 +6,7 @@ final Map<String, FluttermojiPropertyItem> fluttermojiProperties = {
   "topType": FluttermojiPropertyItem(title: "Hair", property: TopType),
   "glassesType":
       FluttermojiPropertyItem(title: "Glasses", property: GlassesType),
+  "necklacesType": FluttermojiPropertyItem(title: "Necklaces", property: NecklacesType),
   "hairColor":
       FluttermojiPropertyItem(title: "Hair\nColor", property: HairColor),
   "facialHairType":
@@ -52,6 +53,7 @@ const String emptySVGIcon = '''
 const Map<String, int> defaultFluttermojiOptions = {
   'topType': 24,
   'glassesType': 0,
+  'necklacesType': 0,
   'hairColor': 1,
   'facialHairType': 0,
   'facialHairColor': 1,
@@ -116,6 +118,10 @@ const List<String> GlassesType = [
   'Sunglasses',
   'Wayfarers',
   'Kurt',
+];
+
+const List<String> NecklacesType = [
+  'Gold Chain',
 ];
 
 const List<String> HairColor = [

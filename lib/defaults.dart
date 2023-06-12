@@ -14,6 +14,7 @@ const List<String> defaultAttributeIcons = [
   "attributeicons/eyebrow.svg",
   "attributeicons/mouth.svg",
   "attributeicons/skin.svg",
+  "attributeicons/glasses.svg",
   "attributeicons/glasses.svg"
 ];
 
@@ -30,7 +31,8 @@ const List<String> defaultAttributeTitles = [
   "Eyebrows",
   "Mouth",
   "Skin",
-  "Glasses"
+  "Glasses",
+  "Necklaces"
 ];
 
 /// List of keys used internally by this library to dereference
@@ -48,5 +50,6 @@ const List<String> attributeKeys = [
   "eyebrowType",
   "mouthType",
   "skinColor",
-  "glassesType"
+  "glassesType",
+  "necklacesType"
 ];
