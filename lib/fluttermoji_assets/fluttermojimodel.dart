@@ -243,6 +243,7 @@ const List<String> EyeType = [
   'Surprised',
   'Wink',
   'WinkWacky',
+  'Pretty',
 ];
 
 const List<String> EyebrowType = [
