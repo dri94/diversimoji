@@ -112,6 +112,7 @@ const List<String> TopType = [
   'WinterHat2',
   'Santa Hat',
   'Santa Hat w/ ears',
+  'Fade',
 ];
 
 const List<String> GlassesType = [
@@ -274,6 +275,7 @@ const List<String> MouthType = [
   'Tongue',
   'Twinkle',
   'Vomit',
+  'Grill'
 ];
 
 const List<String> SkinColor = [
