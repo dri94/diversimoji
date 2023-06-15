@@ -85,7 +85,7 @@ class FluttermojiCustomizer extends StatefulWidget {
   /// in your app to let users save their selection manually.
   final bool autosave;
 
-  static const int attributesCount = 12;
+  static const int attributesCount = 13;
 
   @override
   _FluttermojiCustomizerState createState() => _FluttermojiCustomizerState();
@@ -95,7 +95,7 @@ class _FluttermojiCustomizerState extends State<FluttermojiCustomizer>
     with SingleTickerProviderStateMixin {
   late FluttermojiController fluttermojiController;
   late TabController tabController;
-  final attributesCount = 12;
+  final attributesCount = 13;
   var heightFactor = 0.4, widthFactor = 0.95;
 
   @override

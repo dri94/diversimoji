@@ -6,7 +6,10 @@ final Map<String, FluttermojiPropertyItem> fluttermojiProperties = {
   "topType": FluttermojiPropertyItem(title: "Hair", property: TopType),
   "glassesType":
       FluttermojiPropertyItem(title: "Glasses", property: GlassesType),
-  "necklacesType": FluttermojiPropertyItem(title: "Necklaces", property: NecklacesType),
+  "necklacesType":
+      FluttermojiPropertyItem(title: "Necklaces", property: NecklacesType),
+  "earringsType":
+      FluttermojiPropertyItem(title: "Earrings", property: EarringsType),
   "hairColor":
       FluttermojiPropertyItem(title: "Hair\nColor", property: HairColor),
   "facialHairType":
@@ -54,6 +57,7 @@ const Map<String, int> defaultFluttermojiOptions = {
   'topType': 24,
   'glassesType': 0,
   'necklacesType': 0,
+  'earringsType': 0,
   'hairColor': 1,
   'facialHairType': 0,
   'facialHairColor': 1,
@@ -125,6 +129,11 @@ const List<String> NecklacesType = [
   'Gold Chain',
 ];
 
+const List<String> EarringsType = [
+  'Nothing',
+  'Gold Hoops',
+  'Gold Studs',
+];
 const List<String> HairColor = [
   'Auburn',
   'Black',

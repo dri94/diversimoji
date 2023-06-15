@@ -12,6 +12,7 @@ import 'fluttermoji_assets/face/nose/nose.dart';
 import 'fluttermoji_assets/skin.dart';
 import 'fluttermoji_assets/top/accessories/glasses.dart';
 import 'fluttermoji_assets/top/accessories/necklaces.dart';
+import 'fluttermoji_assets/top/accessories/earrings.dart';
 import 'fluttermoji_assets/top/facialHair/facialHair.dart';
 import 'fluttermoji_assets/top/hairStyles/hairStyle.dart';
 
@@ -112,6 +113,7 @@ class FluttermojiController extends GetxController {
     String _eyebrows = eyebrow['${_getFluttermojiProperty('eyebrowType')}'];
     String _glasses = glasses[_getFluttermojiProperty('glassesType')];
     String _necklaces = necklaces[_getFluttermojiProperty('necklacesType')];
+    String _earrings = earrings[_getFluttermojiProperty('earringsType')];
     String _hair = HairStyle.generateHairStyle(
         hairType: _getFluttermojiProperty('topType'),
         hColor: _getFluttermojiProperty('hairColor'))!;
@@ -148,10 +150,11 @@ xmlns:xlink="http://www.w3.org/1999/xlink">
         _nose +
         _eyes +
         _eyebrows +
-        _necklaces +
+        _glasses +
         '''</g>''' +
         _hair +
         _necklaces +
+        _earrings +
         '''</g></g></g></g></svg>''';
     return _completeSVG;
   }
@@ -249,6 +252,11 @@ xmlns:xlink="http://www.w3.org/1999/xlink">
         if (attributeValueIndex == 0) return emptySVGIcon;
         return '''<svg width="20px" height="20px" viewBox="75 150 120 120" >''' +
             necklaces[NecklacesType[attributeValueIndex!]] +
+            '''</svg>''';
+      case 'earringsType':
+        if (attributeValueIndex == 0) return emptySVGIcon;
+        return '''<svg width="20px" height="20px" viewBox="75 150 120 120" >''' +
+            earrings[EarringsType[attributeValueIndex!]] +
             '''</svg>''';
       case 'skinColor':
         return '''<svg width="264px" height="280px" viewBox="0 0 264 280" version="1.1"

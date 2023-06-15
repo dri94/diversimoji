@@ -15,7 +15,8 @@ const List<String> defaultAttributeIcons = [
   "attributeicons/mouth.svg",
   "attributeicons/skin.svg",
   "attributeicons/glasses.svg",
-  "attributeicons/glasses.svg"
+  "attributeicons/glasses.svg",
+  "attributeicons/glasses.svg",
 ];
 
 /// Default list of titles that are rendered at the top of the widget, indicating
@@ -32,7 +33,8 @@ const List<String> defaultAttributeTitles = [
   "Mouth",
   "Skin",
   "Glasses",
-  "Necklaces"
+  "Necklaces",
+  "Earrings",
 ];
 
 /// List of keys used internally by this library to dereference
@@ -51,5 +53,6 @@ const List<String> attributeKeys = [
   "mouthType",
   "skinColor",
   "glassesType",
-  "necklacesType"
+  "necklacesType",
+  "earringsType",
 ];
