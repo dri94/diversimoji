@@ -112,7 +112,19 @@ const List<String> TopType = [
   'WinterHat2',
   'Santa Hat',
   'Santa Hat w/ ears',
-  'Fade',
+  'hair1',
+  'hair2',
+  'hair3',
+  'hair4',
+  'hair5',
+  'hair6',
+  'hair7',
+  'hair8',
+  'hair9',
+  'hair10',
+  'hair11',
+  'hair12',
+
 ];
 
 const List<String> GlassesType = [
@@ -132,8 +144,8 @@ const List<String> NecklacesType = [
 
 const List<String> EarringsType = [
   'Nothing',
-  'Gold Hoops',
   'Gold Studs',
+  'earring1'
 ];
 const List<String> HairColor = [
   'Auburn',
@@ -190,12 +202,22 @@ const List<String> ClotheType = [
   'Crew Neck Tee',
   'GraphicShirt',
   'Scoop-neck Tee',
-  'ShirtVNeck',
   'Hoodie',
   'CollarSweater',
   'Overall',
   'Blazer + T-Shirt',
   'BlazerSweater',
+  'ShirtVNeck',
+  'cloth1',
+  'cloth2',
+  'cloth3',
+  'cloth4',
+  'cloth5',
+  'cloth6',
+  'cloth7',
+  'cloth8',
+  'cloth9',
+  'cloth10',
 ];
 
 const List<String> ClotheColor = [
@@ -244,7 +266,9 @@ const List<String> EyeType = [
   'Surprised',
   'Wink',
   'WinkWacky',
-  'Pretty',
+  'eye1',
+  'eye2',
+  'eye3'
 ];
 
 const List<String> EyebrowType = [
@@ -275,7 +299,8 @@ const List<String> MouthType = [
   'Tongue',
   'Twinkle',
   'Vomit',
-  'Grill'
+  'mouth1',
+  'mouth2'
 ];
 
 const List<String> SkinColor = [
