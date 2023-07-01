@@ -154,7 +154,7 @@ xmlns:xlink="http://www.w3.org/1999/xlink">
         '''</g>''' +
         _hair +
         _necklaces +
-        _earrings +
+        _earrings+
         '''</g></g></g></g></svg>''';
     return _completeSVG;
   }
@@ -255,7 +255,7 @@ xmlns:xlink="http://www.w3.org/1999/xlink">
             '''</svg>''';
       case 'earringsType':
         if (attributeValueIndex == 0) return emptySVGIcon;
-        return '''<svg width="20px" height="20px" viewBox="75 150 120 120" >''' +
+        return '''<svg width="50px" height="50px" viewBox="55 55 150 150" >''' +
             earrings[EarringsType[attributeValueIndex!]] +
             '''</svg>''';
       case 'skinColor':
