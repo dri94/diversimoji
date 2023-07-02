@@ -15,8 +15,8 @@ const List<String> defaultAttributeIcons = [
   "attributeicons/mouth.svg",
   "attributeicons/skin.svg",
   "attributeicons/glasses.svg",
-  "attributeicons/glasses.svg",
-  "attributeicons/glasses.svg",
+  "attributeicons/necklaces.svg",
+  "attributeicons/earrings.svg",
 ];
 
 /// Default list of titles that are rendered at the top of the widget, indicating
