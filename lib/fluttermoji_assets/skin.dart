@@ -1,48 +1,118 @@
 /// SVG strings for skin colours
 const Map<String, dynamic> skin = {
-  'Tanned': '''
-  <g id="Skin/Tanned" mask="url(#mask-6)" fill="#FD9841">
+  'Ivory': '''
+  <g id="Skin/Ivory" mask="url(#mask-6)" fill="#f7e7d6">
     <g transform="translate(0.000000, 0.000000)" id="Color">
       <rect x="0" y="0" width="264" height="280" />
     </g>
   </g>
   ''',
-  'Yellow': '''
-  <g id="Skin/Yellow" mask="url(#mask-6)" fill="#F8D25C">
+  'Porcelain': '''
+  <g id="Skin/Porcelain" mask="url(#mask-6)" fill="#e5cfb6">
     <g transform="translate(0.000000, 0.000000)" id="Color">
       <rect x="0" y="0" width="264" height="280" />
     </g>
   </g>
   ''',
-  'White': '''
-  <g id="Skin/White" mask="url(#mask-6)" fill="#FFDBB4">
+  'WarmIvory': '''
+  <g id="Skin/WarmIvory" mask="url(#mask-6)" fill="#f0e1ac">
+    <g transform="translate(0.000000, 0.000000)" id="Color">
+      <rect x="0" y="0" width="264" height="280" />
+    </g>
+  </g>
+  ''',
+  'Sand': '''
+  <g id="Skin/Sand" mask="url(#mask-6)" fill="#e3c596">
+    <g transform="translate(0.000000, 0.000000)" id="Color">
+      <rect x="0" y="0" width="264" height="280" />
+    </g>
+  </g>
+  ''',
+  'RoseBeige': '''
+  <g id="Skin/RoseBeige" mask="url(#mask-6)" fill="#e3be8b">
+    <g transform="translate(0.000000, 0.000000)" id="Color">
+      <rect x="0" y="0" width="264" height="280" />
+    </g>
+  </g>
+  ''',
+  'Limestone': '''
+  <g id="Skin/Limestone" mask="url(#mask-6)" fill="#dbbb92">
+    <g transform="translate(0.000000, 0.000000)" id="Color">
+      <rect x="0" y="0" width="264" height="280" />
+    </g>
+  </g>
+  ''',
+  'Beige': '''
+  <g id="Skin/Beige" mask="url(#mask-6)" fill="#e0bf85">
+    <g transform="translate(0.000000, 0.000000)" id="Color">
+      <rect x="0" y="0" width="264" height="280" />
+    </g>
+  </g>
+  ''',
+  'Sienna': '''
+  <g id="Skin/Sienna" mask="url(#mask-6)" fill="#c19d7d">
+    <g transform="translate(0.000000, 0.000000)" id="Color">
+      <rect x="0" y="0" width="264" height="280" />
+    </g>
+  </g>
+  ''',
+  'Honey': '''
+  <g id="Skin/Honey" mask="url(#mask-6)" fill="#bc9464">
+    <g transform="translate(0.000000, 0.000000)" id="Color">
+      <rect x="0" y="0" width="264" height="280" />
+    </g>
+  </g>
+  ''',
+  'Band': '''
+  <g id="Skin/Band" mask="url(#mask-6)" fill="#a28a64">
+    <g transform="translate(0.000000, 0.000000)" id="Color">
+      <rect x="0" y="0" width="264" height="280" />
+    </g>
+  </g>
+  ''',
+  'Almond': '''
+  <g id="Skin/Almond" mask="url(#mask-6)" fill="#876140">
+    <g transform="translate(0.000000, 0.000000)" id="Color">
+      <rect x="0" y="0" width="264" height="280" />
+    </g>
+  </g>
+  ''',
+  'Chestnut': '''
+  <g id="Skin/Chestnut" mask="url(#mask-6)" fill="#7c5537">
+    <g transform="translate(0.000000, 0.000000)" id="Color">
+      <rect x="0" y="0" width="264" height="280" />
+    </g>
+  </g>
+  ''',
+  'Bronze': '''
+  <g id="Skin/Bronze" mask="url(#mask-6)" fill="#6b4526">
     <g transform="translate(0.000000, 0.000000)" id="Color">
       <rect x="0" y="0" width="264" height="280" />
     </g>
   </g>  ''',
-  'Peach': '''
-  <g id="Skin/Pale" mask="url(#mask-6)" fill="#EDB98A">
+  'Umber': '''
+  <g id="Skin/Umber" mask="url(#mask-6)" fill="#a0694c">
     <g transform="translate(0.000000, 0.000000)" id="Color">
       <rect x="0" y="0" width="264" height="280" />
     </g>
   </g> 
   ''',
-  'Brown': '''
-  <g id="Skin/Brown" mask="url(#mask-6)" fill="#D08B5B">
+  'Golden': '''
+  <g id="Skin/Golden" mask="url(#mask-6)" fill="#744c2f">
     <g transform="translate(0.000000, 0.000000)" id="Color">
       <rect x="0" y="0" width="264" height="280" />
     </g>
   </g>
   ''',
-  'DarkBrown': '''
-  <g id="Skin/DarkBrown" mask="url(#mask-6)" fill="#AE5D29">
+  'Espresso': '''
+  <g id="Skin/Espresso" mask="url(#mask-6)" fill="#593d21">
     <g transform="translate(0.000000, 0.000000)" id="Color">
       <rect x="0" y="0" width="264" height="280" />
     </g>
   </g> 
   ''',
-  'Black': '''
-  <g id="Skin/Black" mask="url(#mask-6)" fill="#614335">
+  'Ebony': '''
+  <g id="Skin/Ebony" mask="url(#mask-6)" fill="#2f2416">
     <g transform="translate(0.000000, 0.000000)" id="Color">
       <rect x="0" y="0" width="264" height="280" />
     </g>

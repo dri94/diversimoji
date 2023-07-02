@@ -304,11 +304,21 @@ const List<String> MouthType = [
 ];
 
 const List<String> SkinColor = [
-  'White',
-  'Peach',
-  'Black',
-  'Brown',
-  'DarkBrown',
-  'Yellow',
-  'Tanned',
+  'Ivory',
+  'Porcelain',
+  'WarmIvory',
+  'Sand',
+  'RoseBeige',
+  'Limestone',
+  'Beige',
+  'Sienna',
+  'Honey',
+  'Band',
+  'Almond',
+  'Chestnut',
+  'Bronze',
+  'Umber',
+  'Golden',
+  'Espresso',
+  'Ebony',
 ];
