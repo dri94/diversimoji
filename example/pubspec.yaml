@@ -23,7 +23,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  fluttermoji:
+  diversimoji:
     path: ../
 
 

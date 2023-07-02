@@ -104,7 +104,7 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  fluttermoji:
+  diversimoji:
     dependency: "direct main"
     description:
       path: ".."

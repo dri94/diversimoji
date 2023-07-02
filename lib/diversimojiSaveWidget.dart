@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fluttermoji/fluttermojiController.dart';
-import 'package:fluttermoji/fluttermojiThemeData.dart';
+import 'package:diversimoji/diversimojiController.dart';
+import 'package:diversimoji/diversimojiThemeData.dart';
 import 'package:get/get.dart';
 
 /// Renders a save button by default OR can be used as a [InkWell]
@@ -8,10 +8,10 @@ import 'package:get/get.dart';
 ///
 /// Additonal callbacks may be triggered by passing a
 /// Function to [onTap].
-class FluttermojiSaveWidget extends StatelessWidget {
+class DiversimojiSaveWidget extends StatelessWidget {
   /// Pass in your `theme` to customize the appearance of the default
   /// save button.
-  final FluttermojiThemeData theme;
+  final DiversimojiThemeData theme;
 
   /// Additonal callbacks to be triggered on tapping the widget
   /// after the save operation is executed.
@@ -26,11 +26,11 @@ class FluttermojiSaveWidget extends StatelessWidget {
   /// If [null], then a default save button is shown to the user.
   final Widget? child;
 
-  /// Find an instance of the [FluttermojiController] to use
+  /// Find an instance of the [DiversimojiController] to use
   ///
   /// Note: This expects the controller to be added to `Get`
   /// previously during runtime.
-  final fluttermojiController = Get.find<FluttermojiController>();
+  final diversimojiController = Get.find<DiversimojiController>();
 
   final InteractiveInkFeatureFactory? splashFactory;
 
@@ -38,22 +38,22 @@ class FluttermojiSaveWidget extends StatelessWidget {
 
   final double? radius;
 
-  FluttermojiSaveWidget({
+  DiversimojiSaveWidget({
     Key? key,
-    FluttermojiThemeData? theme,
+    DiversimojiThemeData? theme,
     this.onTap,
     this.child,
     this.splashFactory,
     this.splashColor,
     this.radius,
-  })  : theme = theme ?? FluttermojiThemeData.standard,
+  })  : theme = theme ?? DiversimojiThemeData.standard,
         super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () async {
-        await fluttermojiController.setFluttermoji();
+        await diversimojiController.setDiversimoji();
         if (onTap != null) onTap!();
       },
       splashFactory: splashFactory,

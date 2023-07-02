@@ -2,23 +2,23 @@ import 'dart:convert';
 
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'fluttermoji_assets/clothes/clothes.dart';
-import 'fluttermoji_assets/face/eyebrow/eyebrow.dart';
-import 'fluttermoji_assets/face/eyes/eyes.dart';
-import 'fluttermoji_assets/face/mouth/mouth.dart';
-import 'fluttermoji_assets/face/nose/nose.dart';
-import 'fluttermoji_assets/fluttermojimodel.dart';
-import 'fluttermoji_assets/skin.dart';
-import 'fluttermoji_assets/style.dart';
-import 'fluttermoji_assets/top/accessories/glasses.dart';
-import 'fluttermoji_assets/top/accessories/necklaces.dart';
-import 'fluttermoji_assets/top/accessories/earrings.dart';
-import 'fluttermoji_assets/top/facialHair/facialHair.dart';
-import 'fluttermoji_assets/top/hairStyles/hairStyle.dart';
+import 'diversimoji_assets/clothes/clothes.dart';
+import 'diversimoji_assets/face/eyebrow/eyebrow.dart';
+import 'diversimoji_assets/face/eyes/eyes.dart';
+import 'diversimoji_assets/face/mouth/mouth.dart';
+import 'diversimoji_assets/face/nose/nose.dart';
+import 'diversimoji_assets/diversimojimodel.dart';
+import 'diversimoji_assets/skin.dart';
+import 'diversimoji_assets/style.dart';
+import 'diversimoji_assets/top/accessories/glasses.dart';
+import 'diversimoji_assets/top/accessories/necklaces.dart';
+import 'diversimoji_assets/top/accessories/earrings.dart';
+import 'diversimoji_assets/top/facialHair/facialHair.dart';
+import 'diversimoji_assets/top/hairStyles/hairStyle.dart';
 
-class FluttermojiFunctions {
+class DiversimojiFunctions {
   late Map<String, int> _decodedList;
-  FluttermojiFunctions() {
+  DiversimojiFunctions() {
     _decodedList = {
       'topType': 4,
       'glassesType': 0,
@@ -38,62 +38,62 @@ class FluttermojiFunctions {
     };
   }
 
-  String _getFluttermojiProperty(String type) {
-    return fluttermojiProperties[type]!
+  String _getDiversimojiProperty(String type) {
+    return diversimojiProperties[type]!
         .property!
         .elementAt(_decodedList[type]!);
   }
 
-  /// Erase fluttermoji String and Map from local storage
-  Future<List<bool>> clearFluttermoji() async {
+  /// Erase diversimoji String and Map from local storage
+  Future<List<bool>> clearDiversimoji() async {
     SharedPreferences pref = await SharedPreferences.getInstance();
     return Future.wait([
-      pref.remove('fluttermojiSelectedOptions'),
-      pref.remove('fluttermoji'),
+      pref.remove('diversimojiSelectedOptions'),
+      pref.remove('diversimoji'),
     ]);
   }
 
   /// Decode your string containing the attributes to a SVG and render it
   /// by enclosing this string with a SvgPicture.string()
-  String decodeFluttermojifromString(String encodedData) {
+  String decodeDiversimojifromString(String encodedData) {
     if (encodedData != '') _decodedList = Map.from(jsonDecode(encodedData));
 
-    String _fluttermojiStyle =
-        fluttermojiStyle[_getFluttermojiProperty('style')]!;
+    String _diversimojiStyle =
+        diversimojiStyle[_getDiversimojiProperty('style')]!;
     String _clothe = Clothes.generateClothes(
-        clotheType: _getFluttermojiProperty('clotheType'),
-        clColor: _getFluttermojiProperty('clotheColor'))!;
+        clotheType: _getDiversimojiProperty('clotheType'),
+        clColor: _getDiversimojiProperty('clotheColor'))!;
     String _facialhair = FacialHair.generateFacialHair(
-        facialHairType: _getFluttermojiProperty('facialHairType'),
-        fhColor: _getFluttermojiProperty('facialHairColor'))!;
-    String _mouth = mouth['${_getFluttermojiProperty('mouthType')}'];
+        facialHairType: _getDiversimojiProperty('facialHairType'),
+        fhColor: _getDiversimojiProperty('facialHairColor'))!;
+    String _mouth = mouth['${_getDiversimojiProperty('mouthType')}'];
     String _nose = nose['Default'];
-    String _eyes = eyes['${_getFluttermojiProperty('eyeType')}'];
-    String _eyebrows = eyebrow['${_getFluttermojiProperty('eyebrowType')}'];
-    String _glasses = glasses[_getFluttermojiProperty('glassesType')];
-    String _necklaces = necklaces[_getFluttermojiProperty('necklacesType')];
-    String _earrings = earrings[_getFluttermojiProperty('earringsType')];
+    String _eyes = eyes['${_getDiversimojiProperty('eyeType')}'];
+    String _eyebrows = eyebrow['${_getDiversimojiProperty('eyebrowType')}'];
+    String _glasses = glasses[_getDiversimojiProperty('glassesType')];
+    String _necklaces = necklaces[_getDiversimojiProperty('necklacesType')];
+    String _earrings = earrings[_getDiversimojiProperty('earringsType')];
     String _hair = HairStyle.generateHairStyle(
-        hairType: _getFluttermojiProperty('topType'),
-        hColor: _getFluttermojiProperty('hairColor'))!;
-    String _skin = skin[_getFluttermojiProperty('skinColor')];
+        hairType: _getDiversimojiProperty('topType'),
+        hColor: _getDiversimojiProperty('hairColor'))!;
+    String _skin = skin[_getDiversimojiProperty('skinColor')];
     String _completeSVG = '''
 <svg width="264px" height="280px" viewBox="0 0 264 280" version="1.1"
 xmlns="http://www.w3.org/2000/svg"
 xmlns:xlink="http://www.w3.org/1999/xlink">
-<desc>Fluttermoji on pub.dev</desc>
+<desc>Diversimoji on pub.dev</desc>
 <defs>
 <circle id="path-1" cx="120" cy="120" r="120"></circle>
 <path d="M12,160 C12,226.27417 65.72583,280 132,280 C198.27417,280 252,226.27417 252,160 L264,160 L264,-1.42108547e-14 L-3.19744231e-14,-1.42108547e-14 L-3.19744231e-14,160 L12,160 Z" id="path-3"></path>
 <path d="M124,144.610951 L124,163 L128,163 L128,163 C167.764502,163 200,195.235498 200,235 L200,244 L0,244 L0,235 C-4.86974701e-15,195.235498 32.235498,163 72,163 L72,163 L76,163 L76,144.610951 C58.7626345,136.422372 46.3722246,119.687011 44.3051388,99.8812385 C38.4803105,99.0577866 34,94.0521096 34,88 L34,74 C34,68.0540074 38.3245733,63.1180731 44,62.1659169 L44,56 L44,56 C44,25.072054 69.072054,5.68137151e-15 100,0 L100,0 L100,0 C130.927946,-5.68137151e-15 156,25.072054 156,56 L156,62.1659169 C161.675427,63.1180731 166,68.0540074 166,74 L166,88 C166,94.0521096 161.51969,99.0577866 155.694861,99.8812385 C153.627775,119.687011 141.237365,136.422372 124,144.610951 Z" id="path-5"></path>
 </defs>
-<g id="Fluttermoji" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-<g transform="translate(-825.000000, -1100.000000)" id="Fluttermoji/Circle">
+<g id="Diversimoji" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+<g transform="translate(-825.000000, -1100.000000)" id="Diversimoji/Circle">
 <g transform="translate(825.000000, 1100.000000)">''' +
-        _fluttermojiStyle +
+        _diversimojiStyle +
         '''
 <g id="Mask"></g>
-<g id="Fluttermoji" stroke-width="1" fill-rule="evenodd">
+<g id="Diversimoji" stroke-width="1" fill-rule="evenodd">
 <g id="Body" transform="translate(32.000000, 36.000000)">
 
 <mask id="mask-6" fill="white">
@@ -118,39 +118,39 @@ xmlns:xlink="http://www.w3.org/1999/xlink">
     return _completeSVG;
   }
 
-  /// Retrieve the local user's fluttermoji attributes from local storage
+  /// Retrieve the local user's diversimoji attributes from local storage
   /// and encode them to a Map of attributes
   ///
   /// returns a Future, you have to await on function call
   Future<Map<String, dynamic>> encodeMySVGtoMap() async {
     SharedPreferences pref = await SharedPreferences.getInstance();
-    String? _fluttermojiOptions = pref.getString('fluttermojiSelectedOptions');
-    if (_fluttermojiOptions == null || _fluttermojiOptions == '') {
-      Map<String, int> _fluttermojiOptionsMap =
-          Map.from(defaultFluttermojiOptions);
+    String? _diversimojiOptions = pref.getString('diversimojiSelectedOptions');
+    if (_diversimojiOptions == null || _diversimojiOptions == '') {
+      Map<String, int> _diversimojiOptionsMap =
+          Map.from(defaultDiversimojiOptions);
       await pref.setString(
-          'fluttermojiSelectedOptions', jsonEncode(_fluttermojiOptionsMap));
+          'diversimojiSelectedOptions', jsonEncode(_diversimojiOptionsMap));
 
-      return _fluttermojiOptionsMap;
+      return _diversimojiOptionsMap;
     }
 
-    return Map.from(jsonDecode(_fluttermojiOptions));
+    return Map.from(jsonDecode(_diversimojiOptions));
   }
 
-  /// Retrieve the local user's fluttermoji attributes from local storage
+  /// Retrieve the local user's diversimoji attributes from local storage
   /// and encode them to a String containing a Map of attributes
   ///
   /// returns a Future, you have to await on function call
   Future<String> encodeMySVGtoString() async {
     SharedPreferences pref = await SharedPreferences.getInstance();
-    String? _fluttermojiOptions = pref.getString('fluttermojiSelectedOptions');
-    if (_fluttermojiOptions == null || _fluttermojiOptions == '') {
-      Map<String, int> _fluttermojiOptionsMap =
-          Map.from(defaultFluttermojiOptions);
+    String? _diversimojiOptions = pref.getString('diversimojiSelectedOptions');
+    if (_diversimojiOptions == null || _diversimojiOptions == '') {
+      Map<String, int> _diversimojiOptionsMap =
+          Map.from(defaultDiversimojiOptions);
       await pref.setString(
-          'fluttermojiSelectedOptions', jsonEncode(_fluttermojiOptionsMap));
-      return jsonEncode(_fluttermojiOptionsMap);
+          'diversimojiSelectedOptions', jsonEncode(_diversimojiOptionsMap));
+      return jsonEncode(_diversimojiOptionsMap);
     }
-    return _fluttermojiOptions;
+    return _diversimojiOptions;
   }
 }

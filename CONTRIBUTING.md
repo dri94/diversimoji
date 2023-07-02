@@ -8,9 +8,6 @@ I heartily welcome all the contributions from anyone willing to improve/add new 
 
 # Submitting Contributions👩‍💻👨‍💻
 Below you will find the process and workflow used to review and merge your changes.
-## Step 0 : Go through the README and the demo
-- The `README.md` file is the best presentation of this project and to accompany that I have a running demo [here](https://psk907.github.io/fluttermoji).
-- I encourage you to check them out to quickly get an idea of this project.
 
 ## Step 1 : Find an issue
 - Take a look at the Existing Issues or create your **own** Issues!
@@ -20,9 +17,9 @@ Below you will find the process and workflow used to review and merge your chang
 ## Step 2 : Fork the Project
 - Fork this Repository. This will create a Local Copy of this Repository on your Github Profile. Keep a reference to the original project in `upstream` remote.
 ```
-$ git clone https://github.com/<your-username>/fluttermoji
-$ cd fluttermoji
-$ git remote add upstream https://github.com/psk907/fluttermoji
+$ git clone https://github.com/<your-username>/diversimoji
+$ cd diversimoji
+$ git remote add upstream https://github.com/dri94/diversimoji
 ```
 
 - If you have already forked the project, update your copy before working.
@@ -47,12 +44,12 @@ $ flutter run
 ```
 
 ## Step 5 : Add and Commit changes
-- IMPORTANT: You need to be in the project root folder _(not in `fluttermoji/example/` )_ for all git commands.
+- IMPORTANT: You need to be in the project root folder _(not in `diversimoji/example/` )_ for all git commands.
 ```
 # To go back to the project root from example folder
 $ cd ..
 ```
-  > or you can just launch a new terminal window in `fluttermoji/` folder 
+  > or you can just launch a new terminal window in `diversimoji/` folder 
 
 - Add all the files/folders needed.
 - After you've made changes or made your contribution to the project add changes to the branch you've just created by:

@@ -1,34 +1,34 @@
 import 'package:flutter/foundation.dart';
 
 /// Maps attribute keys to the attribute value list
-final Map<String, FluttermojiPropertyItem> fluttermojiProperties = {
-  "style": FluttermojiPropertyItem(title: "Style", property: FluttermojiStyle),
-  "topType": FluttermojiPropertyItem(title: "Hair", property: TopType),
+final Map<String, DiversimojiPropertyItem> diversimojiProperties = {
+  "style": DiversimojiPropertyItem(title: "Style", property: DiversimojiStyle),
+  "topType": DiversimojiPropertyItem(title: "Hair", property: TopType),
   "glassesType":
-      FluttermojiPropertyItem(title: "Glasses", property: GlassesType),
+      DiversimojiPropertyItem(title: "Glasses", property: GlassesType),
   "necklacesType":
-      FluttermojiPropertyItem(title: "Necklaces", property: NecklacesType),
+      DiversimojiPropertyItem(title: "Necklaces", property: NecklacesType),
   "earringsType":
-      FluttermojiPropertyItem(title: "Earrings", property: EarringsType),
+      DiversimojiPropertyItem(title: "Earrings", property: EarringsType),
   "hairColor":
-      FluttermojiPropertyItem(title: "Hair\nColor", property: HairColor),
+      DiversimojiPropertyItem(title: "Hair\nColor", property: HairColor),
   "facialHairType":
-      FluttermojiPropertyItem(title: "Facial\nHair", property: FacialHairType),
-  "facialHairColor": FluttermojiPropertyItem(
+      DiversimojiPropertyItem(title: "Facial\nHair", property: FacialHairType),
+  "facialHairColor": DiversimojiPropertyItem(
       title: "F-Hair\nColor", property: FacialHairColor),
-  "clotheType": FluttermojiPropertyItem(title: "Outfit", property: ClotheType),
+  "clotheType": DiversimojiPropertyItem(title: "Outfit", property: ClotheType),
   "clotheColor":
-      FluttermojiPropertyItem(title: "Outfit\nColor", property: ClotheColor),
-  "eyeType": FluttermojiPropertyItem(title: "Eye", property: EyeType),
+      DiversimojiPropertyItem(title: "Outfit\nColor", property: ClotheColor),
+  "eyeType": DiversimojiPropertyItem(title: "Eye", property: EyeType),
   "eyebrowType":
-      FluttermojiPropertyItem(title: "Eyebrow", property: EyebrowType),
-  "mouthType": FluttermojiPropertyItem(title: "Mouth", property: MouthType),
-  "skinColor": FluttermojiPropertyItem(title: "Skin", property: SkinColor),
+      DiversimojiPropertyItem(title: "Eyebrow", property: EyebrowType),
+  "mouthType": DiversimojiPropertyItem(title: "Mouth", property: MouthType),
+  "skinColor": DiversimojiPropertyItem(title: "Skin", property: SkinColor),
 };
 
 /// Models the metadata needed for rendering widgets in the UI
 ///
-/// 'ExpandedFluttermojiCardItem' has been renamed to Attribute Item
+/// 'ExpandedDiversimojiCardItem' has been renamed to Attribute Item
 class AttributeItem {
   String title;
   String? key;
@@ -38,11 +38,11 @@ class AttributeItem {
       {this.iconsize, this.title = "Unnamed", this.key, this.iconAsset});
 }
 
-class FluttermojiPropertyItem extends ChangeNotifier {
+class DiversimojiPropertyItem extends ChangeNotifier {
   String title;
   int choice;
   List<String>? property;
-  FluttermojiPropertyItem({
+  DiversimojiPropertyItem({
     this.title = "Unnamed",
     this.choice = 0,
     this.property,
@@ -53,7 +53,7 @@ const String emptySVGIcon = '''
 <svg xmlns="http://www.w3.org/2000/svg"  viewBox="-20 -20 80 80" width="80px" height="80px"><path fill="#dff0fe" stroke="#4788c7" stroke-miterlimit="10" d="M20,1C9.507,1,1,9.507,1,20s8.507,19,19,19s19-8.507,19-19 S30.493,1,20,1z M6,20c0-7.732,6.268-14,14-14c2.963,0,5.706,0.926,7.968,2.496L8.496,27.968C6.926,25.706,6,22.963,6,20z M20,34 c-2.963,0-5.706-0.926-7.968-2.496l19.472-19.472C33.074,14.294,34,17.037,34,20C34,27.732,27.732,34,20,34z"/></svg>
 ''';
 
-const Map<String, int> defaultFluttermojiOptions = {
+const Map<String, int> defaultDiversimojiOptions = {
   'topType': 24,
   'glassesType': 0,
   'necklacesType': 0,
@@ -71,7 +71,7 @@ const Map<String, int> defaultFluttermojiOptions = {
   'graphicType': 0
 };
 
-const List<String> FluttermojiStyle = [
+const List<String> DiversimojiStyle = [
   'Transparent',
   'Circle',
 ];

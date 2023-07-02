@@ -1,7 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:fluttermoji/fluttermoji.dart';
+import 'package:diversimoji/diversimoji.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,11 +11,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Fluttermoji Demo',
+      title: 'Diversimoji Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light(),
       // darkTheme: ThemeData.dark(),
-      home: MyHomePage(title: 'Fluttermoji'),
+      home: MyHomePage(title: 'Diversimoji'),
     );
   }
 }
@@ -45,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Text(
-              "Use your Fluttermoji anywhere\nwith the below widget",
+              "Use your Diversimoji anywhere\nwith the below widget",
               style: TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
               textAlign: TextAlign.center,
             ),
@@ -53,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
           SizedBox(
             height: 25,
           ),
-          FluttermojiCircleAvatar(
+          DiversimojiCircleAvatar(
             backgroundColor: Colors.grey[200],
             radius: 100,
           ),
@@ -113,7 +113,7 @@ class NewPage extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 30),
-                child: FluttermojiCircleAvatar(
+                child: DiversimojiCircleAvatar(
                   radius: 100,
                   backgroundColor: Colors.grey[200],
                 ),
@@ -127,17 +127,17 @@ class NewPage extends StatelessWidget {
                       style: Theme.of(context).textTheme.titleLarge,
                     ),
                     Spacer(),
-                    FluttermojiSaveWidget(),
+                    DiversimojiSaveWidget(),
                   ],
                 ),
               ),
               Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 8.0, vertical: 30),
-                child: FluttermojiCustomizer(
+                child: DiversimojiCustomizer(
                   scaffoldWidth: min(600, _width * 0.85),
                   autosave: false,
-                  theme: FluttermojiThemeData(
+                  theme: DiversimojiThemeData(
                       boxDecoration: BoxDecoration(boxShadow: [BoxShadow()])),
                 ),
               ),

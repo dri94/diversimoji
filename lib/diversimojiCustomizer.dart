@@ -1,23 +1,23 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:fluttermoji/defaults.dart';
-import 'package:fluttermoji/fluttermojiSaveWidget.dart';
-import 'package:fluttermoji/fluttermojiThemeData.dart';
-import 'fluttermoji_assets/fluttermojimodel.dart';
+import 'package:diversimoji/defaults.dart';
+import 'package:diversimoji/diversimojiSaveWidget.dart';
+import 'package:diversimoji/diversimojiThemeData.dart';
+import 'diversimoji_assets/diversimojimodel.dart';
 import 'package:get/get.dart';
-import 'fluttermojiController.dart';
+import 'diversimojiController.dart';
 
-/// This widget provides the user with a UI for customizing their Fluttermoji
+/// This widget provides the user with a UI for customizing their Diversimoji
 ///
 ///*****
 ///Note: \
-/// It is advised that a [FluttermojiCircleAvatar] also be present in the same page.
+/// It is advised that a [DiversimojiCircleAvatar] also be present in the same page.
 /// to show the user a preview of the changes being made.
-class FluttermojiCustomizer extends StatefulWidget {
-  /// Creates a widget UI to customize the Fluttermoji
+class DiversimojiCustomizer extends StatefulWidget {
+  /// Creates a widget UI to customize the Diversimoji
   ///
-  /// You may provide a [FluttermojiThemeData] instance to adjust the appearance of this
+  /// You may provide a [DiversimojiThemeData] instance to adjust the appearance of this
   /// widget to your app's theme.
   ///
   /// Accepts optional [scaffoldHeight] and [scaffoldWidth] attributes
@@ -25,13 +25,13 @@ class FluttermojiCustomizer extends StatefulWidget {
   ///
   ///*****
   ///Note: \
-  /// It is advised that a [FluttermojiCircleAvatar] also be present in the same page.
+  /// It is advised that a [DiversimojiCircleAvatar] also be present in the same page.
   /// to show the user a preview of the changes being made.
-  FluttermojiCustomizer({
+  DiversimojiCustomizer({
     Key? key,
     this.scaffoldHeight,
     this.scaffoldWidth,
-    FluttermojiThemeData? theme,
+    DiversimojiThemeData? theme,
     List<String>? attributeTitles,
     List<String>? attributeIcons,
     this.autosave = true,
@@ -45,7 +45,7 @@ class FluttermojiCustomizer extends StatefulWidget {
           "List of Attribute Icon paths must be of length $attributesCount.\n"
           " You need to provide icon paths for all attributes",
         ),
-        this.theme = theme ?? FluttermojiThemeData.standard,
+        this.theme = theme ?? DiversimojiThemeData.standard,
         this.attributeTitles = attributeTitles ?? defaultAttributeTitles,
         this.attributeIcons = attributeIcons ?? defaultAttributeIcons,
         super(key: key);
@@ -55,7 +55,7 @@ class FluttermojiCustomizer extends StatefulWidget {
 
   /// Configuration for the overall visual theme for this widget
   /// and the components within it.
-  final FluttermojiThemeData theme;
+  final DiversimojiThemeData theme;
 
   /// List of titles that are rendered at the top of the widget, indicating
   /// which attribute the user is customizing.
@@ -81,19 +81,19 @@ class FluttermojiCustomizer extends StatefulWidget {
   /// Will save the selection automatically everytime the user selects
   /// something when set to `true` .
   ///
-  /// If set to `false` you may want to implement a [FluttermojiSaveWidget]
+  /// If set to `false` you may want to implement a [DiversimojiSaveWidget]
   /// in your app to let users save their selection manually.
   final bool autosave;
 
   static const int attributesCount = 13;
 
   @override
-  _FluttermojiCustomizerState createState() => _FluttermojiCustomizerState();
+  _DiversimojiCustomizerState createState() => _DiversimojiCustomizerState();
 }
 
-class _FluttermojiCustomizerState extends State<FluttermojiCustomizer>
+class _DiversimojiCustomizerState extends State<DiversimojiCustomizer>
     with SingleTickerProviderStateMixin {
-  late FluttermojiController fluttermojiController;
+  late DiversimojiController diversimojiController;
   late TabController tabController;
   final attributesCount = 13;
   var heightFactor = 0.4, widthFactor = 0.95;
@@ -102,13 +102,13 @@ class _FluttermojiCustomizerState extends State<FluttermojiCustomizer>
   void initState() {
     super.initState();
 
-    var _fluttermojiController;
-    Get.put(FluttermojiController());
-    _fluttermojiController = Get.find<FluttermojiController>();
+    var _diversimojiController;
+    Get.put(DiversimojiController());
+    _diversimojiController = Get.find<DiversimojiController>();
 
     setState(() {
       tabController = TabController(length: attributesCount, vsync: this);
-      fluttermojiController = _fluttermojiController;
+      diversimojiController = _diversimojiController;
     });
 
     tabController.addListener(() {
@@ -119,17 +119,17 @@ class _FluttermojiCustomizerState extends State<FluttermojiCustomizer>
   @override
   void dispose() {
     // This ensures that unsaved edits are reverted
-    fluttermojiController.restoreState();
+    diversimojiController.restoreState();
     super.dispose();
   }
 
   void onTapOption(int index, int? i, AttributeItem attribute) {
     if (index != i) {
       setState(() {
-        fluttermojiController.selectedOptions[attribute.key] = index;
+        diversimojiController.selectedOptions[attribute.key] = index;
       });
-      fluttermojiController.updatePreview();
-      if (widget.autosave) fluttermojiController.setFluttermoji();
+      diversimojiController.updatePreview();
+      if (widget.autosave) diversimojiController.setDiversimoji();
     }
   }
 
@@ -228,14 +228,14 @@ class _FluttermojiCustomizerState extends State<FluttermojiCustomizer>
         attributeIndex < attributes.length;
         attributeIndex++) {
       var attribute = attributes[attributeIndex];
-      if (!fluttermojiController.selectedOptions.containsKey(attribute.key)) {
-        fluttermojiController.selectedOptions[attribute.key] = 0;
+      if (!diversimojiController.selectedOptions.containsKey(attribute.key)) {
+        diversimojiController.selectedOptions[attribute.key] = 0;
       }
 
       /// Number of options available for said [attribute]
       /// Eg: "Hairstyle" attribue has 38 options
       var attributeListLength =
-          fluttermojiProperties[attribute.key!]!.property!.length;
+          diversimojiProperties[attribute.key!]!.property!.length;
 
       /// Number of tiles per horizontal row,
       int gridCrossAxisCount;
@@ -249,7 +249,7 @@ class _FluttermojiCustomizerState extends State<FluttermojiCustomizer>
       else
         gridCrossAxisCount = 4;
 
-      int? i = fluttermojiController.selectedOptions[attribute.key];
+      int? i = diversimojiController.selectedOptions[attribute.key];
 
       /// Build the main Tile Grid with all the options from the attribute
       var _tileGrid = GridView.builder(
@@ -270,11 +270,11 @@ class _FluttermojiCustomizerState extends State<FluttermojiCustomizer>
             padding: widget.theme.tilePadding,
             child: SvgPicture.string(
            //   fit: BoxFit.contain,
-              fluttermojiController.getComponentSVG(attribute.key, index),
+              diversimojiController.getComponentSVG(attribute.key, index),
              // alignment: Alignment.center,
                height: 20,
 
-              semanticsLabel: 'Your Fluttermoji',
+              semanticsLabel: 'Your Diversimoji',
               placeholderBuilder: (context) => Center(
                 child: CupertinoActivityIndicator(),
               ),
@@ -288,7 +288,7 @@ class _FluttermojiCustomizerState extends State<FluttermojiCustomizer>
           padding: EdgeInsets.symmetric(vertical: 2.0, horizontal: 12),
           child: SvgPicture.asset(
             attribute.iconAsset!,
-            package: 'fluttermoji',
+            package: 'diversimoji',
             height: attribute.iconsize ??
                 (widget.scaffoldHeight != null
                     ? widget.scaffoldHeight! / heightFactor * 0.03
